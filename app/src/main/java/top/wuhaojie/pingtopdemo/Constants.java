@@ -6,4 +6,5 @@ package top.wuhaojie.pingtopdemo;
 public interface Constants {
     String[] TITLES = new String[]{"精选", "发现", "行程", "我"};
     String[] LIST_ZONE = new String[]{"积分管理", "分享拼途", "联系我们", "设置"};
+    String[] SCORE_TITLES = new String[]{"小额红包", "中额红包", "高额红包"};
 }

@@ -1,5 +1,6 @@
 package top.wuhaojie.pingtopdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,9 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
 /**
  * Created by wuhaojie on 2016/4/14 15:25.
  */
@@ -21,11 +19,8 @@ public class ZoneFragment extends Fragment implements View.OnClickListener {
 
     private View mRootView;
     private ListView mLv_zone;
-    @Bind(R.id.my_favorite_zone)
     LinearLayout mFavorite;
-    @Bind(R.id.my_message_zone)
     LinearLayout mMessage;
-    @Bind(R.id.my_order_zone)
     LinearLayout mOrder;
 
     @Nullable
@@ -33,13 +28,17 @@ public class ZoneFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.zone, container, false);
         mLv_zone = (ListView) mRootView.findViewById(R.id.lv_zone);
-        ButterKnife.bind(getActivity());
+//        ButterKnife.bind(getActivity());
+        mFavorite = (LinearLayout) mRootView.findViewById(R.id.my_favorite_zone);
+        mMessage = (LinearLayout) mRootView.findViewById(R.id.my_message_zone);
+        mOrder = (LinearLayout) mRootView.findViewById(R.id.my_order_zone);
         mLv_zone.setAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, Constants.LIST_ZONE));
         mLv_zone.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
+                        startActivity(new Intent(getActivity(), ScoreActivity.class));
                         break;
                     case 1:
                         break;
