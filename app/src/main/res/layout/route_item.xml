@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+    <ImageView
+        android:id="@+id/iv_route"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="#6000"
+        android:src="@drawable/news_1"/>
+
+    <TextView
+        android:id="@+id/tv_route"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        tools:text="问到青城山，访水都江堰"/>
+
+</android.support.v7.widget.CardView>

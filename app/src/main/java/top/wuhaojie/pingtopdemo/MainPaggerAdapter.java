@@ -20,6 +20,9 @@ public class MainPaggerAdapter extends FragmentPagerAdapter {
             case 0:
                 fragment = new NewFragment();
                 break;
+            case 2:
+                fragment = new RouteFragment();
+                break;
             case 3:
                 fragment = new ZoneFragment();
                 break;
