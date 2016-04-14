@@ -12,6 +12,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/my_message_zone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -33,6 +34,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/my_favorite_zone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -54,6 +56,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/my_order_zone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
