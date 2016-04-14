@@ -15,11 +15,14 @@ public class MainPaggerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        NewFragment fragment = new NewFragment();
+        Fragment fragment = new NewFragment();
         switch (position) {
             case 0:
                 fragment = new NewFragment();
-            case 1:
+                break;
+            case 3:
+                fragment = new ZoneFragment();
+                break;
         }
         return fragment;
     }
@@ -31,6 +34,6 @@ public class MainPaggerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return Constants.titles[position];
+        return Constants.TITLES[position];
     }
 }
