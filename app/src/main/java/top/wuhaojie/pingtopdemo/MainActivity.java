@@ -1,31 +1,49 @@
 package top.wuhaojie.pingtopdemo;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
+
+    @Bind(R.id.tab_main)
+    TabLayout mTabLayout;
+    @Bind(R.id.vp_main)
+    ViewPager mViewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+        initViews();
+
+    }
+
+    private void initViews() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("拼途");
+        mTabLayout.addTab(mTabLayout.newTab().setText("精选"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("发现"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("行程"));
+        mTabLayout.addTab(mTabLayout.newTab().setText("我"));
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+//        View listView = LayoutInflater.from(this).inflate(R.layout.news, mViewPager, true);
+
+
+//        listView.addView(LayoutInflater.from(this).inflate(R.layout.news_item, listView, true));
+//        mViewPager.addView(listView, 0);
+
     }
 
     @Override
