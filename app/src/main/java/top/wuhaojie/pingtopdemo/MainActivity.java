@@ -32,17 +32,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("拼途");
-        mTabLayout.addTab(mTabLayout.newTab().setText("精选"));
-        mTabLayout.addTab(mTabLayout.newTab().setText("发现"));
-        mTabLayout.addTab(mTabLayout.newTab().setText("行程"));
-        mTabLayout.addTab(mTabLayout.newTab().setText("我"));
 
-
-//        View listView = LayoutInflater.from(this).inflate(R.layout.news, mViewPager, true);
-
-
-//        listView.addView(LayoutInflater.from(this).inflate(R.layout.news_item, listView, true));
-//        mViewPager.addView(listView, 0);
+        mViewPager.setAdapter(new MainPaggerAdapter(getSupportFragmentManager()));
+        mTabLayout.setupWithViewPager(mViewPager);
 
     }
 

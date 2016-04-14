@@ -4,6 +4,7 @@
     <string name="action_open">开启抽屉</string>
     <string name="action_close">关闭抽屉</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pay">PayActivity</string>
 </resources>
