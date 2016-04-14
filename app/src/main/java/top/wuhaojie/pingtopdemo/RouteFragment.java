@@ -1,5 +1,6 @@
 package top.wuhaojie.pingtopdemo;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -38,10 +39,17 @@ public class RouteFragment extends Fragment {
                 mHandler.sendEmptyMessageDelayed(0, 2000);
             }
         });
-        mRcRoute.setHasFixedSize(true);
+//        mRcRoute.setHasFixedSize(true);
         mRcRoute.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRcRoute.setAdapter(mAdapter);
         mRcRoute.setItemAnimator(new DefaultItemAnimator());
+        mRcRoute.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+                if(parent.getChildPosition(view)!=0)
+                    outRect.top = 20;
+            }
+        });
         return mRootView;
     }
 

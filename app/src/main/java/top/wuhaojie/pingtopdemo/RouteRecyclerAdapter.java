@@ -22,12 +22,11 @@ public class RouteRecyclerAdapter extends RecyclerView.Adapter {
     public RouteRecyclerAdapter(Context context) {
         mContext = context;
         mItems.add(new Item("问道青城山，访水都江堰", mContext.getResources().getDrawable(R.drawable.news_1)));
-        mItems.add(new Item("美食成都，天堂九寨", mContext.getResources().getDrawable(R.drawable.news_1)));
     }
 
     public void add() {
         mItems.add(0, new Item("美食成都，天堂九寨", mContext.getResources().getDrawable(R.drawable.news_1)));
-        notifyDataSetChanged();
+        notifyItemInserted(mItems.size()-1);
     }
 
     private List<Item> mItems = new ArrayList<>();
