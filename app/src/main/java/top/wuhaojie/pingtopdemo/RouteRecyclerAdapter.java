@@ -26,7 +26,7 @@ public class RouteRecyclerAdapter extends RecyclerView.Adapter {
 
     public void add() {
         mItems.add(0, new Item("美食成都，天堂九寨", mContext.getResources().getDrawable(R.drawable.news_1)));
-        notifyItemInserted(mItems.size()-1);
+        notifyItemInserted(mItems.size() - 1);
     }
 
     private List<Item> mItems = new ArrayList<>();
@@ -68,9 +68,16 @@ public class RouteRecyclerAdapter extends RecyclerView.Adapter {
 
         public ViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
             mImageView = (ImageView) itemView.findViewById(R.id.iv_route);
             mTextView = (TextView) itemView.findViewById(R.id.tv_route);
         }
+
     }
 
 }
