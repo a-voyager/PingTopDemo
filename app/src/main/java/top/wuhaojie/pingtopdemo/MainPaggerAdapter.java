@@ -17,14 +17,17 @@ public class MainPaggerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Fragment fragment = new NewFragment();
         switch (position) {
-            case 0:
+            case 2:
                 fragment = new NewFragment();
                 break;
-            case 2:
+            case 0:
                 fragment = new RouteFragment();
                 break;
             case 3:
                 fragment = new ZoneFragment();
+                break;
+            case 1:
+                fragment = new FindFragment();
                 break;
         }
         return fragment;

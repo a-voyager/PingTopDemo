@@ -5,11 +5,14 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
+    <include layout="@layout/news_item"/>
+
+
     <Button
-        android:layout_width="wrap_content"
-        android:text="测试"
         android:id="@+id/btn_test"
-        android:layout_height="wrap_content"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交订单"/>
 
 
 </LinearLayout>

@@ -18,7 +18,7 @@
             android:layout_gravity="center"
             android:background="#9000"
             android:gravity="center"
-            android:text="推送一"
+            android:text="行程一"
             android:textColor="#FFF"
             android:textSize="36sp"/>
 

@@ -23,7 +23,7 @@ public class WebViewActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("详情");
-        mWebView.loadUrl("http://115.28.0.251:8080/guide/index.html");
+        mWebView.loadUrl(Constants.URL);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
