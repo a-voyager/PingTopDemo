@@ -7,10 +7,10 @@
         </shape>
     </item>
     <item
-        android:bottom="3px"
-        android:left="3px"
-        android:right="3px"
-        android:top="3px">
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
         <shape>
             <solid android:color="#FFF"/>
             <corners android:radius="5dp"/>
