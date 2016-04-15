@@ -1,6 +1,7 @@
 package top.wuhaojie.pingtopdemo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -61,7 +62,7 @@ public class RouteRecyclerAdapter extends RecyclerView.Adapter {
         return mItems.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView mImageView;
         public TextView mTextView;
@@ -71,7 +72,7 @@ public class RouteRecyclerAdapter extends RecyclerView.Adapter {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    mContext.startActivity(new Intent(mContext, WebViewActivity.class));
                 }
             });
             mImageView = (ImageView) itemView.findViewById(R.id.iv_route);
