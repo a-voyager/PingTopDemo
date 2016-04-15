@@ -11,4 +11,5 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_my_order">MyOrderActivity</string>
     <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_msg">MsgActivity</string>
 </resources>

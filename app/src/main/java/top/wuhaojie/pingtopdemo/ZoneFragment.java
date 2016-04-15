@@ -69,6 +69,7 @@ public class ZoneFragment extends Fragment implements View.OnClickListener {
             case R.id.my_favorite_zone:
                 break;
             case R.id.my_message_zone:
+                startActivity(new Intent(getActivity(), MsgActivity.class));
                 break;
             case R.id.my_order_zone:
                 startActivity(new Intent(getActivity(), MyOrderActivity.class));
